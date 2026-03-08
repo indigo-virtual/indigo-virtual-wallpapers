@@ -1,0 +1,15 @@
+{
+  "name": "indigo-virtual-wallpapers",
+  "version": "1.0.0",
+  "description": "Static wallpaper API repository with automated metadata generation",
+  "private": true,
+  "scripts": {
+    "generate:wallpapers": "node scripts/generate-wallpapers-json.js"
+  },
+  "dependencies": {
+    "sharp": "^0.33.5"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

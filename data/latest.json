@@ -1,0 +1,14 @@
+{
+  "wallpapers": [
+    {
+      "id": "wallpaper-1",
+      "image": "https://cdn.jsdelivr.net/gh/indigo-virtual/indigo-virtual-wallpapers@main/wallpapers/wallpaper-1.png",
+      "thumbnail": "https://cdn.jsdelivr.net/gh/indigo-virtual/indigo-virtual-wallpapers@main/thumbnails/wallpaper-1.png",
+      "author": "Nikolas Bartek",
+      "author_id": "IGO1113",
+      "resolution": "1920x1080",
+      "source": "",
+      "added": "2026-03-08T16:24:18.545Z"
+    }
+  ]
+}
