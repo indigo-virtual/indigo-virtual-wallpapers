@@ -24,3 +24,9 @@
 - `cd` to this repo → `git init` (if needed) → `git remote add origin https://github.com/YOUR_ORG/indigo-virtual-wallpapers.git`
 - `git add .` → `git commit -m "..."` → `git branch -M main` → `git push -u origin main`
 - Set `REPO_OWNER` / `REPO_NAME` / `BRANCH` in `scripts/generate-wallpapers-json.js` to match your repo, then run `npm run generate:wallpapers` and commit `data/` if you want correct CDN URLs
+
+## jsDelivr cache (why you still see old data)
+
+- **Why:** jsDelivr caches `@main` (and other branch URLs) for up to **7 days**. After you push, the CDN may still serve the old JSON.
+- **Fix 1 — Purge manually:** Open [https://www.jsdelivr.com/tools/purge](https://www.jsdelivr.com/tools/purge), paste your URL (e.g. `https://cdn.jsdelivr.net/gh/indigo-virtual/indigo-virtual-wallpapers@main/data/index.json`), click **Purge**. Repeat for `latest.json` and `page-1.json` (etc.) if needed.
+- **Fix 2 — Auto-purge on push:** The repo includes a GitHub Action that purges the API URLs when you push to `main`. After the workflow runs, the CDN serves fresh data within a short time.

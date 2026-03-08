@@ -1,0 +1,25 @@
+# Purge jsDelivr cache after push so @main URLs serve fresh data.
+# Without this, the CDN can cache for up to 7 days.
+# If your repo is elsewhere, change BASE below to match (e.g. gh/YOUR_ORG/indigo-virtual-wallpapers@main).
+name: Purge jsDelivr cache
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  purge:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Purge CDN cache
+        run: |
+          BASE="https://purge.jsdelivr.net/gh/indigo-virtual/indigo-virtual-wallpapers@main"
+          for path in "/data/index.json" "/data/latest.json"; do
+            echo "Purging $BASE$path"
+            curl -s -o /dev/null -w "%{http_code}" "$BASE$path" && echo " OK" || true
+          done
+          # Purge first few pages (adjust if you have many)
+          for i in 1 2 3 4 5; do
+            echo "Purging $BASE/data/page-$i.json"
+            curl -s -o /dev/null -w "%{http_code}" "$BASE/data/page-$i.json" && echo " OK" || true
+          done
