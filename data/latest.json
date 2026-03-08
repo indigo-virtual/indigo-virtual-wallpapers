@@ -1,6 +1,146 @@
 {
   "wallpapers": [
     {
+      "id": "wallpaper-10",
+      "image": "https://cdn.jsdelivr.net/gh/indigo-virtual/indigo-virtual-wallpapers@main/wallpapers/wallpaper-10.png",
+      "thumbnail": "https://cdn.jsdelivr.net/gh/indigo-virtual/indigo-virtual-wallpapers@main/thumbnails/wallpaper-10.png",
+      "author": "Rahul Chakraborty",
+      "author_id": "IGO0002",
+      "resolution": "1920x1080",
+      "source": "",
+      "added": "2026-03-08T17:33:59.817Z"
+    },
+    {
+      "id": "wallpaper-11",
+      "image": "https://cdn.jsdelivr.net/gh/indigo-virtual/indigo-virtual-wallpapers@main/wallpapers/wallpaper-11.png",
+      "thumbnail": "https://cdn.jsdelivr.net/gh/indigo-virtual/indigo-virtual-wallpapers@main/thumbnails/wallpaper-11.png",
+      "author": "Rahul Chakraborty",
+      "author_id": "IGO0002",
+      "resolution": "1920x1080",
+      "source": "",
+      "added": "2026-03-08T17:33:59.817Z"
+    },
+    {
+      "id": "wallpaper-12",
+      "image": "https://cdn.jsdelivr.net/gh/indigo-virtual/indigo-virtual-wallpapers@main/wallpapers/wallpaper-12.png",
+      "thumbnail": "https://cdn.jsdelivr.net/gh/indigo-virtual/indigo-virtual-wallpapers@main/thumbnails/wallpaper-12.png",
+      "author": "Rahul Chakraborty",
+      "author_id": "IGO0002",
+      "resolution": "1920x1080",
+      "source": "",
+      "added": "2026-03-08T17:33:59.817Z"
+    },
+    {
+      "id": "wallpaper-13",
+      "image": "https://cdn.jsdelivr.net/gh/indigo-virtual/indigo-virtual-wallpapers@main/wallpapers/wallpaper-13.png",
+      "thumbnail": "https://cdn.jsdelivr.net/gh/indigo-virtual/indigo-virtual-wallpapers@main/thumbnails/wallpaper-13.png",
+      "author": "Rahul Chakraborty",
+      "author_id": "IGO0002",
+      "resolution": "1920x1080",
+      "source": "",
+      "added": "2026-03-08T17:33:59.817Z"
+    },
+    {
+      "id": "wallpaper-14",
+      "image": "https://cdn.jsdelivr.net/gh/indigo-virtual/indigo-virtual-wallpapers@main/wallpapers/wallpaper-14.png",
+      "thumbnail": "https://cdn.jsdelivr.net/gh/indigo-virtual/indigo-virtual-wallpapers@main/thumbnails/wallpaper-14.png",
+      "author": "Rahul Chakraborty",
+      "author_id": "IGO0002",
+      "resolution": "1920x1080",
+      "source": "",
+      "added": "2026-03-08T17:33:59.817Z"
+    },
+    {
+      "id": "wallpaper-15",
+      "image": "https://cdn.jsdelivr.net/gh/indigo-virtual/indigo-virtual-wallpapers@main/wallpapers/wallpaper-15.png",
+      "thumbnail": "https://cdn.jsdelivr.net/gh/indigo-virtual/indigo-virtual-wallpapers@main/thumbnails/wallpaper-15.png",
+      "author": "Rahul Chakraborty",
+      "author_id": "IGO0002",
+      "resolution": "1920x1080",
+      "source": "",
+      "added": "2026-03-08T17:33:59.817Z"
+    },
+    {
+      "id": "wallpaper-16",
+      "image": "https://cdn.jsdelivr.net/gh/indigo-virtual/indigo-virtual-wallpapers@main/wallpapers/wallpaper-16.png",
+      "thumbnail": "https://cdn.jsdelivr.net/gh/indigo-virtual/indigo-virtual-wallpapers@main/thumbnails/wallpaper-16.png",
+      "author": "Rahul Chakraborty",
+      "author_id": "IGO0002",
+      "resolution": "1920x1080",
+      "source": "",
+      "added": "2026-03-08T17:33:59.817Z"
+    },
+    {
+      "id": "wallpaper-17",
+      "image": "https://cdn.jsdelivr.net/gh/indigo-virtual/indigo-virtual-wallpapers@main/wallpapers/wallpaper-17.png",
+      "thumbnail": "https://cdn.jsdelivr.net/gh/indigo-virtual/indigo-virtual-wallpapers@main/thumbnails/wallpaper-17.png",
+      "author": "Rahul Chakraborty",
+      "author_id": "IGO0002",
+      "resolution": "1920x1080",
+      "source": "",
+      "added": "2026-03-08T17:33:59.817Z"
+    },
+    {
+      "id": "wallpaper-18",
+      "image": "https://cdn.jsdelivr.net/gh/indigo-virtual/indigo-virtual-wallpapers@main/wallpapers/wallpaper-18.png",
+      "thumbnail": "https://cdn.jsdelivr.net/gh/indigo-virtual/indigo-virtual-wallpapers@main/thumbnails/wallpaper-18.png",
+      "author": "Rahul Chakraborty",
+      "author_id": "IGO0002",
+      "resolution": "1920x1080",
+      "source": "",
+      "added": "2026-03-08T17:33:59.817Z"
+    },
+    {
+      "id": "wallpaper-5",
+      "image": "https://cdn.jsdelivr.net/gh/indigo-virtual/indigo-virtual-wallpapers@main/wallpapers/wallpaper-5.png",
+      "thumbnail": "https://cdn.jsdelivr.net/gh/indigo-virtual/indigo-virtual-wallpapers@main/thumbnails/wallpaper-5.png",
+      "author": "Rahul Chakraborty",
+      "author_id": "IGO0002",
+      "resolution": "1920x1080",
+      "source": "",
+      "added": "2026-03-08T17:33:59.817Z"
+    },
+    {
+      "id": "wallpaper-6",
+      "image": "https://cdn.jsdelivr.net/gh/indigo-virtual/indigo-virtual-wallpapers@main/wallpapers/wallpaper-6.png",
+      "thumbnail": "https://cdn.jsdelivr.net/gh/indigo-virtual/indigo-virtual-wallpapers@main/thumbnails/wallpaper-6.png",
+      "author": "Rahul Chakraborty",
+      "author_id": "IGO0002",
+      "resolution": "1920x1080",
+      "source": "",
+      "added": "2026-03-08T17:33:59.817Z"
+    },
+    {
+      "id": "wallpaper-7",
+      "image": "https://cdn.jsdelivr.net/gh/indigo-virtual/indigo-virtual-wallpapers@main/wallpapers/wallpaper-7.png",
+      "thumbnail": "https://cdn.jsdelivr.net/gh/indigo-virtual/indigo-virtual-wallpapers@main/thumbnails/wallpaper-7.png",
+      "author": "Rahul Chakraborty",
+      "author_id": "IGO0002",
+      "resolution": "1920x1080",
+      "source": "",
+      "added": "2026-03-08T17:33:59.817Z"
+    },
+    {
+      "id": "wallpaper-8",
+      "image": "https://cdn.jsdelivr.net/gh/indigo-virtual/indigo-virtual-wallpapers@main/wallpapers/wallpaper-8.png",
+      "thumbnail": "https://cdn.jsdelivr.net/gh/indigo-virtual/indigo-virtual-wallpapers@main/thumbnails/wallpaper-8.png",
+      "author": "Rahul Chakraborty",
+      "author_id": "IGO0002",
+      "resolution": "1920x1080",
+      "source": "",
+      "added": "2026-03-08T17:33:59.817Z"
+    },
+    {
+      "id": "wallpaper-9",
+      "image": "https://cdn.jsdelivr.net/gh/indigo-virtual/indigo-virtual-wallpapers@main/wallpapers/wallpaper-9.png",
+      "thumbnail": "https://cdn.jsdelivr.net/gh/indigo-virtual/indigo-virtual-wallpapers@main/thumbnails/wallpaper-9.png",
+      "author": "Rahul Chakraborty",
+      "author_id": "IGO0002",
+      "resolution": "1920x1080",
+      "source": "",
+      "added": "2026-03-08T17:33:59.817Z"
+    },
+    {
       "id": "wallpaper-2",
       "image": "https://cdn.jsdelivr.net/gh/indigo-virtual/indigo-virtual-wallpapers@main/wallpapers/wallpaper_2.png",
       "thumbnail": "https://cdn.jsdelivr.net/gh/indigo-virtual/indigo-virtual-wallpapers@main/thumbnails/wallpaper_2.png",
