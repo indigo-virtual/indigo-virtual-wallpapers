@@ -22,11 +22,11 @@ API JSON files live under the `data/` path.
 
 ## Endpoints
 
-| Endpoint | Method | Description |
-| -------- | ------ | ------------ |
-| `data/index.json` | GET | Index: total count, page count, page size, list of page filenames, latest feed filename |
-| `data/latest.json` | GET | Newest 20 wallpapers (no pagination) |
-| `data/page-{N}.json` | GET | One page of wallpapers (50 per page, 1-based). Page 1 = newest |
+| Endpoint             | Method | Description                                                                             |
+| -------------------- | ------ | --------------------------------------------------------------------------------------- |
+| `data/index.json`    | GET    | Index: total count, page count, page size, list of page filenames, latest feed filename |
+| `data/latest.json`   | GET    | Newest 20 wallpapers (no pagination)                                                    |
+| `data/page-{N}.json` | GET    | One page of wallpapers (50 per page, 1-based). Page 1 = newest                          |
 
 All responses are JSON. No authentication required.
 
@@ -46,17 +46,25 @@ All responses are JSON. No authentication required.
   "total_pages": 7,
   "page_size": 50,
   "latest": "latest.json",
-  "pages": ["page-1.json", "page-2.json", "page-3.json", "page-4.json", "page-5.json", "page-6.json", "page-7.json"]
+  "pages": [
+    "page-1.json",
+    "page-2.json",
+    "page-3.json",
+    "page-4.json",
+    "page-5.json",
+    "page-6.json",
+    "page-7.json"
+  ]
 }
 ```
 
-| Field | Type | Description |
-| ----- | ---- | ------------ |
-| `total_wallpapers` | number | Total number of wallpapers |
-| `total_pages` | number | Number of paginated pages |
-| `page_size` | number | Wallpapers per page (50) |
-| `latest` | string | Filename of the latest feed (`"latest.json"`) |
-| `pages` | string[] | List of page filenames in order (`page-1.json` = newest) |
+| Field              | Type     | Description                                              |
+| ------------------ | -------- | -------------------------------------------------------- |
+| `total_wallpapers` | number   | Total number of wallpapers                               |
+| `total_pages`      | number   | Number of paginated pages                                |
+| `page_size`        | number   | Wallpapers per page (50)                                 |
+| `latest`           | string   | Filename of the latest feed (`"latest.json"`)            |
+| `pages`            | string[] | List of page filenames in order (`page-1.json` = newest) |
 
 Use this to know how many pages exist and to build URLs for `latest.json` and `page-N.json`.
 
@@ -97,6 +105,7 @@ Contains the **20 most recently added** wallpapers. Sorted newest first. No pagi
 **N** = page number (1-based). Page 1 = newest 50.
 
 **Examples:**
+
 - Page 1 (newest): `https://cdn.jsdelivr.net/gh/indigo-virtual/indigo-virtual-wallpapers@main/data/page-1.json`
 - Page 2: `.../data/page-2.json`
 
@@ -127,16 +136,16 @@ Each page has up to **50** wallpapers, sorted **newest first** by `added`.
 
 Every wallpaper in `latest.json` and `page-N.json` has this shape:
 
-| Field | Type | Description |
-| ----- | ---- | ------------ |
-| `id` | string | Stable slug (e.g. `wallpaper-1`, `sunset-lake`) |
-| `image` | string | Full CDN URL of the full-resolution image |
-| `thumbnail` | string | Full CDN URL of the thumbnail (400px width) |
-| `author` | string | Display name (default `"Unknown"`) |
-| `author_id` | string | Optional author identifier (may be `""`) |
-| `resolution` | string | e.g. `"1920x1080"` |
-| `source` | string | Optional attribution URL (may be `""`) |
-| `added` | string | ISO 8601 timestamp when the wallpaper was added |
+| Field        | Type   | Description                                     |
+| ------------ | ------ | ----------------------------------------------- |
+| `id`         | string | Stable slug (e.g. `wallpaper-1`, `sunset-lake`) |
+| `image`      | string | Full CDN URL of the full-resolution image       |
+| `thumbnail`  | string | Full CDN URL of the thumbnail (400px width)     |
+| `author`     | string | Display name (default `"Unknown"`)              |
+| `author_id`  | string | Optional author identifier (may be `""`)        |
+| `resolution` | string | e.g. `"1920x1080"`                              |
+| `source`     | string | Optional attribution URL (may be `""`)          |
+| `added`      | string | ISO 8601 timestamp when the wallpaper was added |
 
 Use `image` for full-size and `thumbnail` for lists/grids. Both URLs are ready to use in `<img src="...">` or equivalent.
 
@@ -149,7 +158,8 @@ Use `image` for full-size and `thumbnail` for lists/grids. Both URLs are ready t
 Define the API base once (e.g. in config or env):
 
 ```javascript
-const WALLPAPER_API_BASE = "https://cdn.jsdelivr.net/gh/indigo-virtual/indigo-virtual-wallpapers@main";
+const WALLPAPER_API_BASE =
+  "https://cdn.jsdelivr.net/gh/indigo-virtual/indigo-virtual-wallpapers@main";
 ```
 
 ### Fetch index
