@@ -15,7 +15,7 @@ repo-root/
 │   ├── latest.json      # Newest 20 wallpapers (homepage feed)
 │   ├── page-1.json      # Paginated wallpapers (50 per page)
 │   ├── page-2.json
-│   └── wallpaper-meta.json  # Persisted metadata (author, author_id, source, added)
+│   └── wallpaper-meta.json  # Persisted metadata (filename, author, author_id, source, added)
 ├── scripts/
 │   └── generate-wallpapers-json.js
 ├── package.json
@@ -72,7 +72,7 @@ The script will:
 
 - Scan `wallpapers/` for images (`.jpg`, `.jpeg`, `.png`, `.webp`)
 - Generate thumbnails in `thumbnails/` (400px width, aspect ratio preserved) when missing or when the source image is newer
-- Persist and merge metadata in `data/wallpaper-meta.json` (author, author_id, source, added)
+- Persist and merge metadata in `data/wallpaper-meta.json` (filename, author, author_id, source, added)
 - Remove metadata and thumbnails for deleted wallpapers
 - Write `data/index.json`, `data/latest.json`, and `data/page-1.json`, `page-2.json`, …
 
@@ -168,6 +168,7 @@ You set the author (and optional `author_id`) in **`data/wallpaper-meta.json`**.
    ```json
    {
      "sunset-lake": {
+       "filename": "Sunset Lake.jpg",
        "author": "Unknown",
        "author_id": "",
        "source": "",
@@ -177,11 +178,14 @@ You set the author (and optional `author_id`) in **`data/wallpaper-meta.json`**.
    }
    ```
 
+   Each entry includes **filename** (the file name on disk) so you can match wallpapers when you add many at once.
+
 3. **Change** `author` and/or `author_id` (and optionally `source`) for that wallpaper:
 
    ```json
    {
      "sunset-lake": {
+       "filename": "Sunset Lake.jpg",
        "author": "Jane Doe",
        "author_id": "jane-doe",
        "source": "https://unsplash.com/...",
@@ -214,6 +218,7 @@ Example:
 ```json
 {
   "sunset-lake": {
+    "filename": "Sunset Lake.jpg",
     "author": "Jane Doe",
     "author_id": "jane-doe",
     "source": "https://example.com/photo",
@@ -222,6 +227,8 @@ Example:
   }
 }
 ```
+
+The **filename** field is set automatically from the file on disk and helps you identify which entry is which when you add multiple wallpapers at once. Do not remove it when editing.
 
 ---
 

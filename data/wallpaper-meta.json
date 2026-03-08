@@ -1,5 +1,30 @@
 {
+  "wallpaper-2": {
+    "filename": "wallpaper_2.png",
+    "author": "Puneet",
+    "author_id": "IGO0013",
+    "source": "",
+    "added": "2026-03-08T17:21:30.178Z",
+    "resolution": "1920x1080"
+  },
+  "wallpaper-3": {
+    "filename": "wallpaper_3.png",
+    "author": "Shyam Sundar",
+    "author_id": "IGO0588",
+    "source": "",
+    "added": "2026-03-08T17:21:30.178Z",
+    "resolution": "1920x1080"
+  },
+  "wallpaper-4": {
+    "filename": "wallpaper_4.png",
+    "author": "Puneet",
+    "author_id": "IGO0013",
+    "source": "",
+    "added": "2026-03-08T17:21:30.178Z",
+    "resolution": "1920x1080"
+  },
   "wallpaper-1": {
+    "filename": "wallpaper-1.png",
     "author": "Nikolas Bartek",
     "author_id": "IGO1113",
     "source": "",

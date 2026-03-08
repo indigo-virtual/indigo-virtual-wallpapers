@@ -1,6 +1,36 @@
 {
   "wallpapers": [
     {
+      "id": "wallpaper-2",
+      "image": "https://cdn.jsdelivr.net/gh/indigo-virtual/indigo-virtual-wallpapers@main/wallpapers/wallpaper_2.png",
+      "thumbnail": "https://cdn.jsdelivr.net/gh/indigo-virtual/indigo-virtual-wallpapers@main/thumbnails/wallpaper_2.png",
+      "author": "Puneet",
+      "author_id": "IGO0013",
+      "resolution": "1920x1080",
+      "source": "",
+      "added": "2026-03-08T17:21:30.178Z"
+    },
+    {
+      "id": "wallpaper-3",
+      "image": "https://cdn.jsdelivr.net/gh/indigo-virtual/indigo-virtual-wallpapers@main/wallpapers/wallpaper_3.png",
+      "thumbnail": "https://cdn.jsdelivr.net/gh/indigo-virtual/indigo-virtual-wallpapers@main/thumbnails/wallpaper_3.png",
+      "author": "Shyam Sundar",
+      "author_id": "IGO0588",
+      "resolution": "1920x1080",
+      "source": "",
+      "added": "2026-03-08T17:21:30.178Z"
+    },
+    {
+      "id": "wallpaper-4",
+      "image": "https://cdn.jsdelivr.net/gh/indigo-virtual/indigo-virtual-wallpapers@main/wallpapers/wallpaper_4.png",
+      "thumbnail": "https://cdn.jsdelivr.net/gh/indigo-virtual/indigo-virtual-wallpapers@main/thumbnails/wallpaper_4.png",
+      "author": "Puneet",
+      "author_id": "IGO0013",
+      "resolution": "1920x1080",
+      "source": "",
+      "added": "2026-03-08T17:21:30.178Z"
+    },
+    {
       "id": "wallpaper-1",
       "image": "https://cdn.jsdelivr.net/gh/indigo-virtual/indigo-virtual-wallpapers@main/wallpapers/wallpaper-1.png",
       "thumbnail": "https://cdn.jsdelivr.net/gh/indigo-virtual/indigo-virtual-wallpapers@main/thumbnails/wallpaper-1.png",

@@ -71,8 +71,8 @@ function ensureDir(dirPath) {
 }
 
 // ---------------------------------------------------------------------------
-// Load existing persisted metadata (author, author_id, source, added) by id
-// Returns { [id]: { author, author_id, source, added } } or {}
+// Load existing persisted metadata (filename, author, author_id, source, added) by id
+// Returns { [id]: { filename?, author, author_id, source, added } } or {}
 // ---------------------------------------------------------------------------
 function loadPersistedMetadata() {
   const filePath = path.join(DATA_DIR, METADATA_FILE);
@@ -93,7 +93,7 @@ function loadPersistedMetadata() {
 }
 
 // ---------------------------------------------------------------------------
-// Save persisted metadata (author, author_id, source, added, resolution per id).
+// Save persisted metadata (filename, author, author_id, source, added, resolution per id).
 // Writes only if content changed for re-runnable behavior.
 // ---------------------------------------------------------------------------
 function savePersistedMetadata(meta) {
@@ -234,6 +234,7 @@ async function main() {
   for (const record of current) {
     if (!persisted[record.id]) {
       persisted[record.id] = {
+        filename: record.filename,
         author: "Unknown",
         author_id: "",
         source: "",
@@ -277,10 +278,12 @@ async function main() {
   const entries = current.map((r) => buildWallpaperEntry(r, persisted));
   entries.sort((a, b) => new Date(b.added) - new Date(a.added));
 
-  // Persist metadata (author, source, added, resolution) — only write if changed
+  // Persist metadata (filename, author, source, added, resolution) — only write if changed
   const toPersist = {};
   for (const e of entries) {
+    const record = current.find((r) => r.id === e.id);
     toPersist[e.id] = {
+      filename: record ? record.filename : e.id,
       author: e.author,
       author_id: e.author_id,
       source: e.source,
