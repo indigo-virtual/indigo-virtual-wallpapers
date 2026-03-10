@@ -1,6 +1,16 @@
 {
   "wallpapers": [
     {
+      "id": "wallpaper-19",
+      "image": "https://cdn.jsdelivr.net/gh/indigo-virtual/indigo-virtual-wallpapers@main/wallpapers/wallpaper-19.png",
+      "thumbnail": "https://cdn.jsdelivr.net/gh/indigo-virtual/indigo-virtual-wallpapers@main/thumbnails/wallpaper-19.png",
+      "author": "Unknown",
+      "author_id": "",
+      "resolution": "1920x1080",
+      "source": "",
+      "added": "2026-03-10T08:01:39.337Z"
+    },
+    {
       "id": "wallpaper-10",
       "image": "https://cdn.jsdelivr.net/gh/indigo-virtual/indigo-virtual-wallpapers@main/wallpapers/wallpaper-10.png",
       "thumbnail": "https://cdn.jsdelivr.net/gh/indigo-virtual/indigo-virtual-wallpapers@main/thumbnails/wallpaper-10.png",
