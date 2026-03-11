@@ -17,7 +17,8 @@ repo-root/
 │   ├── page-2.json
 │   └── wallpaper-meta.json  # Persisted metadata (filename, author, author_id, source, added)
 ├── scripts/
-│   └── generate-wallpapers-json.js
+│   ├── generate-wallpapers-json.js   # Generates data/*.json from wallpapers + wallpaper-meta.json
+│   └── update-author.js              # Bulk-update author/author_id in wallpaper-meta.json
 ├── package.json
 └── WALLPAPER_API.md     # This file
 ```
@@ -149,11 +150,31 @@ New wallpapers get a deterministic `id` from the filename and an `added` timesta
 
 ## Editing metadata (author, author_id, source)
 
-The script **never overwrites** `author`, `author_id`, `source`, or `added` with defaults once they are stored. Stored values live in `data/wallpaper-meta.json`.
+**Single source of truth:** You only ever edit **`data/wallpaper-meta.json`** for author/author_id/source. The files `latest.json` and `page-*.json` are **generated** — do not edit them by hand. After changing metadata, run `npm run generate:wallpapers` once and all API JSONs update.
 
-### How do I set the author name?
+### Quick: change one author everywhere (bulk update)
 
-You set the author (and optional `author_id`) in **`data/wallpaper-meta.json`**. The script never overwrites `author`, `author_id`, `source`, or `added` once they’re stored there.
+To update **author name and/or id** for every wallpaper that currently has a given author (e.g. rename "Rahul Chakraborty" or change id `IGO0002`):
+
+```bash
+# Match by author_id, set new name and optionally new id
+npm run update:author -- --by-id IGO0002 --name "Rahul C." --id IGO0002
+
+# Match by current author name, set new name (and optionally new id)
+npm run update:author -- --by-name "Rahul Chakraborty" --name "Rahul C." --id IGO0002
+```
+
+Then regenerate the API JSONs:
+
+```bash
+npm run generate:wallpapers
+```
+
+All wallpapers that had that author will show the new name/id in `latest.json` and every `page-*.json`.
+
+### How do I set the author name? (per wallpaper)
+
+You set the author (and optional `author_id`) in **`data/wallpaper-meta.json`** only. The generator never overwrites `author`, `author_id`, `source`, or `added` once they’re stored there.
 
 **Steps:**
 
@@ -180,55 +201,24 @@ You set the author (and optional `author_id`) in **`data/wallpaper-meta.json`**.
 
    Each entry includes **filename** (the file name on disk) so you can match wallpapers when you add many at once.
 
-3. **Change** `author` and/or `author_id` (and optionally `source`) for that wallpaper:
-
-   ```json
-   {
-     "sunset-lake": {
-       "filename": "Sunset Lake.jpg",
-       "author": "Jane Doe",
-       "author_id": "jane-doe",
-       "source": "https://unsplash.com/...",
-       "added": "2026-03-08T12:00:00Z",
-       "resolution": "1920x1080"
-     }
-   }
-   ```
-
-   Don’t remove or change `added`; the script uses it for ordering.
+3. **Change** `author` and/or `author_id` (and optionally `source`) for that wallpaper.
 
 4. **Run the generator again** so the API JSON files get the new author:
    ```bash
    npm run generate:wallpapers
    ```
 
-After that, `latest.json` and the page files will show your author name. In short: add the image → run script → edit `data/wallpaper-meta.json` (set `author`) → run script again.
+After that, `latest.json` and the page files will show your author name. In short: edit only `data/wallpaper-meta.json` → run `npm run generate:wallpapers`.
 
----
+### Summary
 
-To set or change author, author_id, source, or resolution in general:
+| Goal | What to do |
+|------|------------|
+| Change one author for many wallpapers | `npm run update:author -- --by-id IGO0002 --name "New Name"` then `npm run generate:wallpapers` |
+| Set author for one wallpaper | Edit `data/wallpaper-meta.json` for that wallpaper’s id, then `npm run generate:wallpapers` |
+| Never edit by hand | `latest.json`, `page-1.json`, `page-2.json`, … (they are generated) |
 
-1. Run the generator once so `data/wallpaper-meta.json` exists.
-2. Open `data/wallpaper-meta.json` and find the entry by wallpaper `id` (slug from filename).
-3. Edit `author`, `author_id`, `source`, or `resolution` as needed. Do not remove `added`.
-4. Run the generator again so the updated values are written into `latest.json` and `page-*.json`.
-
-Example:
-
-```json
-{
-  "sunset-lake": {
-    "filename": "Sunset Lake.jpg",
-    "author": "Jane Doe",
-    "author_id": "jane-doe",
-    "source": "https://example.com/photo",
-    "added": "2026-03-08T12:00:00Z",
-    "resolution": "1920x1080"
-  }
-}
-```
-
-The **filename** field is set automatically from the file on disk and helps you identify which entry is which when you add multiple wallpapers at once. Do not remove it when editing.
+The **filename** field is set automatically from the file on disk. Do not remove `added` when editing.
 
 ---
 

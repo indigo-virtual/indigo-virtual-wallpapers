@@ -4,7 +4,8 @@
   "description": "Static wallpaper API repository with automated metadata generation",
   "private": true,
   "scripts": {
-    "generate:wallpapers": "node scripts/generate-wallpapers-json.js"
+    "generate:wallpapers": "node scripts/generate-wallpapers-json.js",
+    "update:author": "node scripts/update-author.js"
   },
   "dependencies": {
     "sharp": "^0.33.5"
